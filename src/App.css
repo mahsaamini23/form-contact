@@ -1,38 +1,219 @@
-.App {
-  text-align: center;
+
+body{
+    object-fit: cover;
+    width:auto;
+    background-image: linear-gradient(rgb(42, 6, 49),rgb(132, 66, 141),rgb(228, 116, 236));
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* Css for search bar */
+.search_container{
+    width:100%;
+    height:70px;
+    display:flex;
+    justify-content: center;
+    align-items: baseline;
+    background-image:url(./Images/irs01_s3old_1381260944675266.webp);
+    object-fit:contain;
+    box-shadow: 0 1px 2px 0 rgb(53, 29, 53);
+    position:fixed;
+    top:0px;
+    z-index: 100;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search{
+    width:80%;
+    display:flex;
+    justify-content: center;
+    padding: 20px 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.search_input{
+    border:none;
+    width:90%;
+    padding: 5px 10px;
+    border-radius: 0 5px 5px 0;
 }
 
-.App-link {
-  color: #61dafb;
+.search_icon{
+    background-color:rgb(247, 192, 247);
+    border: none;
+    padding: 0 10px;
+    border-radius: 5px 0 0 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Css for form */
+.form_container{
+    margin:0 auto;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    width:80%;
+    background-image: url(./Images/پس-زمینه-بنفش-26.jpg);
+    border:1px solid rgb(59, 37, 59);
+}
+.form{
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 12px;
+    gap:5px;
+}
+.form_item{
+    display:flex;
+    justify-content: space-between;
+}
+.form_item input{
+    width:65%;
+    border:1px solid rgb(82, 39, 82);
+    border-radius: 5px;
+    color:rgb(36, 15, 36);
+    padding:4px 0 ;
+}
+.btn_form{
+    align-self: center;
+    width:30%;
+    color:#fff;
+    background-color: rgb(129, 47, 129);
+    border: none;
+    border-radius: 5px;
+    padding:8px 0 ;
+    margin-left: 5%;
+}
+/* Css for card */
+.profile_card{
+    display:flex;
+    justify-content: space-between;
+    /* padding:15px; */
+}
+.option_container{
+    display:flex;
+    justify-content: space-between;
+    gap:10px;
+    position:relative;
+}
+.option{
+    position:absolute;
+    top:20px;
+    right:0px;
+    gap:10px;
+    padding:10px 0;
+
+}
+.btn_container{
+    width:80%;
+    display:flex;
+    justify-content: flex-end;
+    gap:30px;
+}
+.btn_card{
+    display:flex;
+    justify-content:space-between;
+    align-items: baseline;
+    width:30px;
+    row-gap: 20px;
+}
+.btn_edit , .btn_delete{
+    background-color: #fff;
+    border: none;
+    margin-top: 6px;
+}
+.card{
+    padding:15px;
+    background-color: #fff;
+    width:70%;
+    margin:0 auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.card_details{
+    display:flex;
+    flex-direction: column;
+    gap:5px;
+    font-size: 12px;
+    color:rgb(59, 37, 59);
+    margin-top: 15px;
+}
+
+.massage_delete{
+    width:200px;
+    height: 100px;
+    border:1px solid purple;
+    color:purple;
+    font-size: 14px;
+    text-align: center;
+    background-color: #fff;
+    position:absolute;
+    top:250px;
+    left:300px;
+    z-index: 101;
+}
+.btn_massage{
+    border:"none";
+    color: #fff;
+    background-color: rgb(116, 97, 116);
+    border-radius: 5px;
+    padding:0 5px;
+}
+
+@media only screen and (min-width:474px) {
+    .form_container{
+        width:90%;
+        border-radius: 10px;
+    }
+    .form{
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        justify-items: center;
+    }
+    .form_item{
+        width:60%;
+    }
+    .btn_form{
+        width:25%;
+        margin-right: 5%;
+    }
+    .card{
+        width:83%;
+    }
+    .card_details{
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap:5px;
+        font-size: 12px;
+        color:rgb(59, 37, 59);
+        margin-top: 15px;
+    }
+}
+
+@media only screen and (min-width:600px){
+    .form_item{
+        width:90%;
+    }
+    .btn_form{
+        width:10%;
+    }
+    .card{
+        width:85%;
+    }
+}
+
+@media only screen and (min-width:700px){
+    .form_container{
+        width:90%;
+    }
+    .form_item{
+        width:48%;
+    }
+    .btn_form{
+        width:20%;
+        margin-right: 6%;
+    }
+    .card{
+        width:87%;
+        border-radius: 10px;
+    }
 }
